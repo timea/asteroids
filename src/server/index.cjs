@@ -29,18 +29,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// Where Angular builds to - In the ./angular/angular.json file, you will find this configuration
-// at the property: projects.angular.architect.build.options.outputPath
-// When you run `ng build`, the output will go to the ./public directory
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 
 /**
  * -------------- ROUTES ----------------
  */
+const asteroidsAPI = require('./components/asteroids/asteoridsAPI.cjs');
 
-
+app.get('/api/asteroids/:from/:to',  asteroidsAPI);
 
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, './../../dist/index.html'), (err) => {
