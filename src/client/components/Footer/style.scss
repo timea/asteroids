@@ -1,0 +1,29 @@
+.footer {
+  position: absolute;
+  bottom: 4rem;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+
+  > div {
+    border: 1px solid white;
+    padding: 1rem;
+    background-color: #2f4f4f;
+    color: #e5cb38;
+    border-radius: 5px;
+  }
+
+  .sum {
+    border: none;
+  }
+  .divider {
+    color: #2f4f4f;
+  }
+}

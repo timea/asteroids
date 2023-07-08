@@ -1,0 +1,161 @@
+.nav {
+  margin: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a:hover {
+      color: #e5cb38;
+      cursor: pointer;
+    }
+
+  @media (max-width: 600px) {
+    margin: 0;
+    .grid {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+}
+
+.nav-logo {
+  width: 3rem;
+
+  svg {
+    fill: white;
+  } 
+}
+
+.nav-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.language-selector {
+  margin: 1rem;
+}
+
+.language-selector:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.basket-svg {
+  width: 2.5rem;
+  fill: #4c8080;
+}
+
+$badge-text-color: #e5cb38;
+$badge-default-bg: #2f4f4f;
+
+// Basiz setup
+.badge {
+  position: absolute;
+  top: 6px;
+  right: -5px;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: $badge-default-bg;
+  color: $badge-text-color;
+
+  border-radius: 3rem; // As longe as this is bigger than the fontsize
+  text-align: center;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: .05rem .8rem .1rem;
+  line-height: inherit;
+  z-index: 1000;
+}
+
+// Style
+.badge--line {
+  background-color: transparent;
+  color: #95a5a6;
+  box-shadow: 0 0 0 1px #95a5a6;
+}
+
+.badge--warning {
+  background-color: $badge-default-bg;
+  font-size: .7rem;
+  padding: .05rem .4rem .15rem;
+}
+
+.container-basket {
+  position: relative;
+}
+
+.admin {
+  justify-content: space-around;
+
+  div {
+    padding: 1rem;
+    border-radius: 6px;
+  }
+
+  a {
+    width: 100%;
+  }
+}
+
+.active {
+  background-color: #e5cb38;
+  color: black;
+}
+
+.wrapper-nav {
+  width: 100%;
+}
+
+.logout {
+  text-align: right;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 100%;
+  opacity: 0.5;
+
+  .allowed {
+    display: grid;
+    grid-template-columns: 20% 20% 35% 15%;
+    grid-gap: 1rem;
+  }
+  .not-allowed {
+    display: grid;
+    grid-template-columns: 90% 10%;
+  }
+}
+
+.hasItems {
+  animation-name: tilt-shaking;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+    fill: #4c8080;
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0eg);
+    fill: #e5cb38;
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+    fill: #4c8080;
+  }
+}
