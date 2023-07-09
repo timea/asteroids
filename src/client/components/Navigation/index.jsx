@@ -10,10 +10,18 @@ const Navigation = () => {
     <nav className="nav">
       <div className="nav-items">
         <Link to={`/`}>
-          Home
+          <div className="home-meteorites">
+            <img src="./meteorite.png" />
+            Home
+          </div>
         </Link>
         <Link to={`/favorites`}>
-          Favorites
+          <div className="home-meteorites">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-heart"><circle cx="12" cy="12" r="10" class="primary"></circle><path class="secondary" d="M12.88 8.88a3 3 0 1 1 4.24 4.24l-4.41 4.42a1 1 0 0 1-1.42 0l-4.41-4.42a3 3 0 1 1 4.24-4.24l.88.88.88-.88z"></path></svg>
+            </span>
+            Favorites
+          </div>
         </Link>
       </div>
     </nav>

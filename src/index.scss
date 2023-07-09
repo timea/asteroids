@@ -39,14 +39,6 @@ a {
   overflow: scroll;
 }
 
-@supports (-webkit-touch-callout: none) {
-  .pages {
-    height: 80svh;
-    overflow: scroll;
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-}
-
 .padded {
   padding: 1rem;
 }

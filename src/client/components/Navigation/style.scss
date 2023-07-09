@@ -43,3 +43,19 @@
 .wrapper-nav {
   width: 100%;
 }
+
+.home-meteorites {
+  max-width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  img {
+    max-width: 21%;
+  }
+
+  svg {
+    width: 33px;
+    margin-top: 12px;
+  }
+}
