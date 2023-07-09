@@ -1,0 +1,11 @@
+.list-asteroids {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 2rem 2rem;
+}
+
+.date {
+  text-align: left;
+}

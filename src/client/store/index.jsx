@@ -2,7 +2,8 @@ import React, { createContext, useReducer } from 'react';
 import Reducer from './Reducer.jsx';
 
 export const initialState = {
-  asteroids: []
+  asteroids: [],
+  asteroidsWithDates: {}
 };
 
 const Store = ({ children }) => {
