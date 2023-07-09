@@ -35,9 +35,8 @@ a {
 }
 
 .pages {
-  height: 80vh;
+  height: 70vh;
   overflow: scroll;
-  padding-bottom: env(safe-area-inset-bottom);
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -54,4 +53,8 @@ a {
 
 .padded-vertical {
   padding: 1rem 0;
+}
+
+.show {
+  opacity: 1;
 }

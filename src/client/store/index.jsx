@@ -3,7 +3,9 @@ import Reducer from './Reducer.jsx';
 
 export const initialState = {
   asteroids: [],
-  asteroidsWithDates: {}
+  asteroidsWithDates: {},
+  error: '',
+  alphabeticalOrder: ''
 };
 
 const Store = ({ children }) => {
