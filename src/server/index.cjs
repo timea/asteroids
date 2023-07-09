@@ -39,6 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
  */
 const asteroidsAPI = require('./components/asteroids/asteoridsAPI.cjs');
 
+app.post('/api/asteroids/favorite',  asteroidsAPI);
+app.get('/api/asteroids/favorites',  asteroidsAPI);
 app.get('/api/asteroids/:from/:to',  asteroidsAPI);
 
 app.get('/*', (req, res) => {

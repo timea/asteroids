@@ -33,6 +33,11 @@ const Reducer = (state, action) => {
         ...state,
         asteroidsWithDates: localCopy
       }
+    case "GET_FAVORITES":
+      return {
+        ...state,
+        favorites: action.payload
+      }
     default:
       return state;
   }

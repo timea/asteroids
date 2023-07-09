@@ -1,4 +1,4 @@
-export default function getAsteroids(dispatch, from, to) {
+export function getAsteroids(dispatch, from, to) {
   const url = import.meta.env.VITE_SERVER_API_URL || '';
   const today = new Date().toISOString().split("T");
 
@@ -26,4 +26,41 @@ export default function getAsteroids(dispatch, from, to) {
       dispatch({ type: "API_ERROR", payload: { asteroidsWithDates: {}, errorMessage: "something is wrong" } })
     }
   })
+}
+
+export function setAsteroidFavorite(asteroid) {
+  const url = import.meta.env.VITE_SERVER_API_URL || '';
+
+  fetch(`${url}/asteroids/favorite`,
+  {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
+    },
+    body: JSON.stringify(asteroid)
+  })
+  .catch((e) => {
+    throw new Error(e);
+  });
+}
+
+export function getFavoriteAsteroids(dispatch) {
+  const url = import.meta.env.VITE_SERVER_API_URL || '';
+
+  fetch(`${url}/asteroids/favorites`,
+    {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      }
+    })
+    .then(resp => resp.json())
+    .then((data) => {
+        dispatch({ type: "GET_FAVORITES", payload: data });
+    })
+    .catch((e) => {
+      throw new Error(e);
+    });
 }

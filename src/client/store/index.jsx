@@ -5,7 +5,8 @@ export const initialState = {
   asteroids: [],
   asteroidsWithDates: {},
   error: '',
-  alphabeticalOrder: ''
+  alphabeticalOrder: '',
+  favorites: []
 };
 
 const Store = ({ children }) => {

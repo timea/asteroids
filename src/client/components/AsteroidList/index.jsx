@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Context } from '../../store/index';
-import getAsteroids from "../../actions/asteroids";
+import { getAsteroids } from "../../actions/asteroids";
 import Asteroid from "../Asteroid";
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { ThemeProvider, createTheme } from '@mui/material/styles';

@@ -1,4 +1,6 @@
 const data = require('./asteroidCache.cjs');
+const asteroidsDAO = require('./asteroidsDAO.cjs');
+
 
 exports.getAsteroids = async (req, res) => {
   const { from, to } = req.params;
@@ -22,4 +24,19 @@ exports.getAsteroids = async (req, res) => {
       })
       .catch(e => res.status(500).send({ message: `${e ? e.message : 'Something is wrong so'} we are sending you some sample data`, data: data.asteroids }));
   }
+}
+exports.getFavoriteAsteroids = async (req, res) => {
+  asteroidsDAO.getFavoriteAsteroids()
+    .then(result => res.status(200).send(result))
+    .catch((err) => {
+      res.status(500).send(`getFavoriteAsteroids error ${err}`);
+    });
+}
+
+exports.saveFavoriteAsteroid = async (req, res) => {
+  asteroidsDAO.saveFavoriteAsteroid(req)
+    .then(result => res.status(200).send(result))
+    .catch((err) => {
+      res.status(500).send(`saveFavoriteAsteroid error ${err}`);
+    });
 }
