@@ -1,11 +1,15 @@
-# How to run
+![image of UI](./asteroids_UI.png)
 
-## Get the Code
+# The Code
+
+## Setup
+
+### Get the Code
 git clone
 cd
 npm install
 
-## DB onfig
+### DB onfig
 rename config.example -> config.json
 set your
   DATABASE_USERNAME
@@ -15,5 +19,10 @@ set your
   NASA_KEY (if you do not have one, the demo key can handle 50 requests per day, 30 per hour)
 add the sql table for the favorites to an existing DB that you set up in the config (just structure)
 
-# Run
+## Run
 npm run dev
+
+# The SQL
+
+[The solution](sql_challenge.md)
+
