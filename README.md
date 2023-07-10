@@ -18,6 +18,7 @@
   - MYSQL_PORT
   - NASA_KEY (if you do not have one, the demo key can handle 50 requests per day, 30 per hour)
 - add the sql table for the favorites to an existing DB that you set up in the config (just structure)
+- add a .env file in the root of the project with VITE_SERVER_API_URL=http://localhost:8080/api
 
 ## Run
 npm run dev
